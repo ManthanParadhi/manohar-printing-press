@@ -1,10 +1,10 @@
 import './App.css';
-import { Uploadform } from './Comps/Uploadform';
+import UploadForm from './Comps/UploadForm';
 
 function App() {
   return (
     <div>
-      <Uploadform />
+      <UploadForm />
     </div>
   );
 }

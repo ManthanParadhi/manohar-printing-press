@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { progressBar } from './progressBar';
+import React, { useState } from 'react';
+import ProgressBar from './ProgressBar';
 
-export const Uploadform = () => {
+const UploadForm = () => {
     const [file, setFile] = useState(null);
     const [error, setError] = useState(null);
     const types = ['image/jpeg','image/png'];
@@ -14,7 +14,7 @@ export const Uploadform = () => {
             setFile(null); 
             setError('Please select a file(jpeg or png)');
         }
-    }
+    };
     
     return (
         <div>
@@ -23,9 +23,11 @@ export const Uploadform = () => {
                 <div className="output">
                     {error && <div className="error">{ error }</div>}
                     {file && <div className="filename">{ file.name }</div>}
-                    {file && <progressBar file={file} setfile={setFile} />}
+                    {file && <ProgressBar file={file} setfile={setFile} />}
                 </div>
             </form>
         </div>
-    )
+    );
 }
+
+export default UploadForm;
