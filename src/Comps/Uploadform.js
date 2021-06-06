@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
+import { progressBar } from './progressBar';
 
 export const Uploadform = () => {
-    const [file, setfile] = useState(null);
-    const [error, seterror] = useState(null);
+    const [file, setFile] = useState(null);
+    const [error, setError] = useState(null);
     const types = ['image/jpeg','image/png'];
     const changeHandler = (e) => {
         if (e.target.files[0] && types.includes(e.target.files[0].type)){
-            setfile(e.target.files[0]);
-            seterror('');
+            setFile(e.target.files[0]);
+            setError('');
         }
         else{
-            setfile(null); 
-            seterror('Please select a file(jpeg or png)');
+            setFile(null); 
+            setError('Please select a file(jpeg or png)');
         }
     }
     
@@ -22,6 +23,7 @@ export const Uploadform = () => {
                 <div className="output">
                     {error && <div className="error">{ error }</div>}
                     {file && <div className="filename">{ file.name }</div>}
+                    {file && <progressBar file={file} setfile={setFile} />}
                 </div>
             </form>
         </div>
