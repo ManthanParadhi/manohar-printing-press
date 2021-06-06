@@ -1,7 +1,6 @@
-import * as firebase from 'firebase/app';
+import app from 'firebase/app';
 import 'firebase/storage';
 import 'firebase/firestore';
-
 
 var firebaseConfig = {
     apiKey: "AIzaSyC8ZiFmmt9KNsU6Hf6hXHgCgXn6a85qDPs",
@@ -13,11 +12,11 @@ var firebaseConfig = {
     measurementId: "G-SDN30BPSM2"
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  app.initializeApp(firebaseConfig);
   //firebase.analytics();
 
-  const projectStorage = firebase.storage();
-  const projectFirestore = firebase.firestore();
-  const timestamp = firebase.firestore.FieldValue.serverTimestamp;
+  const projectStorage = app.storage();
+  const projectFirestore = app.firestore();
+  const timestamp = app.firestore.FieldValue.serverTimestamp;
 
 export { projectStorage, projectFirestore, timestamp };
