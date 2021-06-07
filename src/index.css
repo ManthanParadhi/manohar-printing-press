@@ -11,6 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.app {
+  margin: 1vh auto;
+  width: 80%;
+}
 .backdrop {
   position: fixed;
   height: 100%;
@@ -27,4 +31,28 @@ code {
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
   border: 5px double white;
+}
+
+.progress-bar {
+  height: 5px;
+  background-color: grey;
+}
+.input input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+.input span {
+  margin: 10px 10px;
+  padding: 10px;
+}
+
+.input {
+  border: 1px solid green;
+  margin: 10px 10px;
+  border-radius: 5px;
+}
+.input:hover {
+  background: green;
+  color: white;
 }
