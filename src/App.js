@@ -10,9 +10,11 @@ function App() {
   const [selectedImg, setSelectedImg] = useState(null);
   return (
     <motion.div initial={{scale:0}} animate={{scale:1}} className="app">
-      <Navigation/>
-      <UploadForm />
-      <ImageGrid setSelectedImg={setSelectedImg} />
+      <div className={selectedImg && "blur"}>
+        <Navigation/>
+        <UploadForm />
+        <ImageGrid setSelectedImg={setSelectedImg} />
+      </div>
       {selectedImg && <Model selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
     </motion.div>
   );
