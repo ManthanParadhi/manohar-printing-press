@@ -15,6 +15,30 @@ code {
   margin: 1vh auto;
   width: 80%;
 }
+.text-center {
+  text-align: center;
+}
+.img-grid {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3%;
+}
+.img-wrap {
+  overflow: hidden;
+  position: relative;
+  height: 0;
+  padding: 50% 0;
+}
+.img-wrap img {
+  max-height: 100%;
+  max-width: 100%;
+  min-width: 110%;
+  min-height: 110%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .backdrop {
   position: fixed;
   height: 100%;
@@ -37,21 +61,36 @@ code {
   height: 5px;
   background-color: grey;
 }
-.input input {
-  height: 0;
-  width: 0;
-  opacity: 0;
-}
-.input span {
-  margin: 10px 10px;
-  padding: 10px;
-}
 
 .input {
   border: 1px solid green;
-  margin: 10px 10px;
-  border-radius: 5px;
+  color: green;
+  padding: 0.4rem 0.7rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: inline-block;
 }
+/* .input input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+} */
+/* input[type="file"]::-webkit-file-upload-button {
+  border: none;
+  padding: 5px 12px;
+  background: #9e2baf;
+  color: #fff;
+  font-size: 1em;
+  transition: all 0.4s;
+  cursor: pointer;
+  border-radius: 20px;
+} */
+/* .input span {
+  margin: 10px 10px;
+  padding: 10px;
+} */
+
 .input:hover {
   background: green;
   color: white;

@@ -17,11 +17,11 @@ const UploadForm = () => {
     };
     
     return (
-        <div>
+        <div className="text-center">
             <form>
                 <label className="input">
-                    <input type='file'onChange={changeHandler} />
-                    <span>Add File</span>
+                    <input type='file'onChange={changeHandler} hidden/>
+                    Add File
                 </label>
                 <div className="output">
                     {error && <div className="error">{ error }</div>}
@@ -30,6 +30,7 @@ const UploadForm = () => {
                 </div>
                 
             </form>
+            
         </div>
     );
 }
