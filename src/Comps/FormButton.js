@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Trial } from './Trial'
+import UploadForm from './UploadForm';
 
 export const FormButton = () => {
     const [viewmf, setViewmf] = useState(false);
@@ -11,7 +11,7 @@ export const FormButton = () => {
             }}>
                 New
             </button>
-            {viewmf && <Trial/>}
+            {viewmf && <UploadForm/>}
         </div>
     )
 }

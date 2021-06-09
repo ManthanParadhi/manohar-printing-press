@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import  useStorage from '../hooks/useStorage';
 
-const ProgressBar = ({ file, setFile }) => {
+const ProgressBar = ({ file, setFile, setSubmit }) => {
     const { progress, url } = useStorage(file);
     useEffect(() => {
         if(url) {
@@ -13,6 +13,7 @@ const ProgressBar = ({ file, setFile }) => {
         <>
         <div>{progress}%</div>
         <div className='progress-bar' style={{width:progress +'%'}}></div>
+        {progress===100 && setSubmit(false)}
         </>
     );
 }

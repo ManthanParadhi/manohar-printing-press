@@ -1,5 +1,4 @@
 import './App.css';
-import UploadForm from './Comps/UploadForm';
 import ImageGrid from './Comps/ImageGrid';
 import { useState } from 'react';
 import { Model } from './Comps/Model';
@@ -14,7 +13,6 @@ function App() {
       <div className={selectedImg && "blur"}>
         <FormButton />
         <Navigation/>
-        <UploadForm />
         <ImageGrid setSelectedImg={setSelectedImg} />
       </div>
       {selectedImg && <Model selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
