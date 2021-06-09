@@ -18,6 +18,12 @@ code {
   text-align: center;
 }
 
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .img-grid {
   margin: 20px auto;
   display: -ms-grid;
@@ -63,6 +69,13 @@ code {
   border: 5px double white;
 }
 
+.backdrop .white {
+  background: white;
+  height: 70vh;
+  width: 70vw;
+  margin: 15vh auto;
+}
+
 .progress-bar {
   height: 5px;
   background-color: grey;
@@ -90,6 +103,10 @@ code {
   transition: -webkit-filter 0.5s;
   transition: filter 0.5s;
   transition: filter 0.5s, -webkit-filter 0.5s;
+}
+
+.price input {
+  outline: none;
 }
 
 /* .input input
