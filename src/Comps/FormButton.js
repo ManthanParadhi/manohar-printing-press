@@ -11,7 +11,7 @@ export const FormButton = () => {
             }}>
                 New
             </button>
-            {viewmf && <UploadForm/>}
+            {viewmf && <UploadForm setViewmf={setViewmf}/>}
         </div>
     )
 }
