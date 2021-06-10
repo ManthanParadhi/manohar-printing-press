@@ -2,17 +2,22 @@ import React, { useState } from 'react';
 import ProgressBar from './ProgressBar';
 
 const UploadForm = ({setViewmf}) => {
+    const [src, setSrc] = useState(null);
     const [file, setFile] = useState(null);
     const [error, setError] = useState(null);
     const [price1, setPrice1] = useState("");
     const [price2, setPrice2] = useState("");
     const [price3, setPrice3] = useState("");
+    const [idno, setIdno] = useState("");
     const [submit, setSubmit] = useState(false)
     const types = ['image/jpeg','image/png'];
     const changeHandler = (e) => {
         if (e.target.files[0] && types.includes(e.target.files[0].type)){
             setFile(e.target.files[0]);
             setError('');
+            setSrc(URL.createObjectURL(e.target.files[0]))
+            
+
         }
         else{
             setFile(null); 
@@ -23,8 +28,8 @@ const UploadForm = ({setViewmf}) => {
     return (
         <div className="text-center backdrop justify-center" style={{zIndex:'1'}}>
             <div className="white">
-            <div className="close">
-                <svg width='20px' height='20px' version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xmlspace="preserve">
+            <div className="close" onClick={()=>{setViewmf(false)}}>
+                <svg width='20px' height='20px' version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xmlSpace="preserve">
 				    <g>
 				    <g>
 						<path d="M257,0C116.39,0,0,114.39,0,255s116.39,257,257,257s255-116.39,255-257S397.61,0,257,0z M383.22,338.79
@@ -37,27 +42,36 @@ const UploadForm = ({setViewmf}) => {
             </div>
                     
                 <form>
+                    <div className="output">
+                        {file && submit && <ProgressBar file={file} setFile={setFile} setSubmit={setSubmit} setViewmf={setViewmf} price1={price1} price2={price2} price3={price3} idno={idno} />}
+                    </div>
+                    <div className={"flex-center "+(!src && "p-2")}>
                     <label className="input">
                         <input type='file'onChange={changeHandler} hidden/>
                         Add File
                     </label>
-                    <div className="output">
-                        {error && <div className="error">{ error }</div>}
-                        {file && <div className="filename">{ file.name }</div>}
-                        {file && submit && <ProgressBar file={file} setFile={setFile} setSubmit={setSubmit} setViewmf={setViewmf} />}
+                    {src && <img className="smimg" src={src} alt=""/>}
                     </div>
-                    <label className="price">
-                        Price for 100:  
-                        <input style={{margin:'1vw'}} type ='text' onChange={(e)=>{setPrice1(e.target.value.replace(/\D/g,''))}} value={price1} />
-                    </label>
-                    <label className="price">
-                        Price for 500:  
-                        <input style={{margin:'1vw'}} type ='text' onChange={(e)=>{setPrice2(e.target.value.replace(/\D/g,''))}} value={price2} />
-                    </label>
-                    <label className="price">
-                        Price for 1000:  
-                        <input style={{margin:'1vw'}} type ='text' onChange={(e)=>{setPrice3(e.target.value.replace(/\D/g,''))}} value={price3} />
-                    </label>
+                    {error && <div className="error">{ error }</div>}
+                    {file && <div className="filename">{ file.name }</div>}
+                    <div className="setprice">
+                        <label className="price">
+                            ID for card :  
+                            <input style={{margin:'1vw'}} type ='text' onChange={(e)=>{setIdno(e.target.value)}} value={idno} required/>
+                        </label>
+                        <label className="price">
+                            Price for 100 :  
+                            <input style={{margin:'1vw'}} type ='text' onChange={(e)=>{setPrice1(e.target.value.replace(/\D/g,''))}} value={price1} required/>
+                        </label>
+                        <label className="price">
+                            Price for 500 :  
+                            <input style={{margin:'1vw'}} type ='text' onChange={(e)=>{setPrice2(e.target.value.replace(/\D/g,''))}} value={price2} required />
+                        </label>
+                        <label className="price">
+                            Price for 1000 :  
+                            <input style={{margin:'1vw'}} type ='text' onChange={(e)=>{setPrice3(e.target.value.replace(/\D/g,''))}} value={price3} required/>
+                        </label>
+                    </div>
                 </form>
                 <button className="input" onClick={()=>{
                     setSubmit(true);

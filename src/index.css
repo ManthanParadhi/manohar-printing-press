@@ -9,6 +9,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+button {
+  background-color: white;
+}
+
+.p-2 {
+  padding: 2vh;
+}
+
 .app {
   margin: 1vh auto;
   width: 80%;
@@ -59,14 +67,21 @@ code {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.backdrop img {
+.backdrop .smimg {
+  width: 6vw;
+  height: 6vh;
+  margin: 10px;
+}
+
+.backdrop .modelimg {
   display: block;
   max-width: 60%;
   max-height: 80%;
-  margin: 60px auto;
+  margin: 30px auto;
   -webkit-box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
           box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
   border: 5px double white;
+  padding: 1vh 1vw;
 }
 
 .backdrop .white {
@@ -76,9 +91,21 @@ code {
   margin: 15vh auto;
 }
 
+.backdrop .white .spec {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #04003a;
+}
+
 .progress-bar {
   height: 5px;
   background-color: grey;
+}
+
+.setprice {
+  margin: auto;
+  width: 30vw;
 }
 
 .input {
@@ -89,6 +116,7 @@ code {
   border-radius: 0.3rem;
   cursor: pointer;
   display: inline-block;
+  outline: none;
 }
 
 .input:hover {
@@ -105,6 +133,26 @@ code {
   transition: filter 0.5s, -webkit-filter 0.5s;
 }
 
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.price {
+  display: block;
+  text-align: right;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .price input {
   outline: none;
 }
@@ -115,9 +163,18 @@ code {
   cursor: pointer;
 }
 
+.close svg {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
 .close svg:hover {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
