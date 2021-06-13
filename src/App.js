@@ -1,6 +1,6 @@
 import './App.css';
 import ImageGrid from './Comps/ImageGrid';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Model } from './Comps/Model';
 import { motion } from 'framer-motion';
 import Admin from './Comps/Admin'
