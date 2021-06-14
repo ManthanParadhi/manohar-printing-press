@@ -11,9 +11,11 @@ function App() {
   return (
     <Router>
       <Route path='/admin/admin' exact component={Admin}/>
+      <Navigation/>
+      
     <motion.div initial={{scale:0}} animate={{scale:1}} className="app">
       <div className={selectedImg && "blur"}>
-        <Navigation/>
+        
         <ImageGrid setSelectedImg={setSelectedImg} />
       </div>
       {selectedImg && <Model selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}

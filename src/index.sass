@@ -11,6 +11,8 @@ code
     monospace  
 button
     background-color: white
+nav
+    z-index: 1
 .form
     text-align: center
     width: 80%
@@ -19,12 +21,41 @@ button
 .p-2
     padding: 2vh
 .app
-    margin: 1vh auto
+    margin: 20vh auto
     width: 80%
 
 .text-center
     text-align: center
-
+.admin
+    margin-top: 15vh
+    // position: fixed
+.login
+    width: 50vw
+    background-color: white
+    margin: 30vh auto
+.error
+    color: red
+.dark
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1),rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))
+    color: white
+    width: 100%
+    margin-top: 1px
+    position: fixed
+    top: 0
+    &:hover
+        background-color: rgb(10, 10, 10)
+    svg
+        display: inline-block
+        margin: 0 10px
+    h3
+        display: inline-block
+        font-family: 'Courgette', cursive
+    h1
+        margin: 0
+        padding: 10px
+        font-family: 'Courgette', cursive
+    .margin-right
+        margin-right: 20px
 .justify-center
     justify-content: center
 .img-grid
@@ -71,7 +102,7 @@ button
         background: rgba(255, 255, 255, 1)
         height: 70vh
         width: 70vw
-        margin: 15vh auto
+        margin: 16vh auto
         font-size: 1.2rem
         color: rgb(4, 0, 58)
         .spec
@@ -127,6 +158,12 @@ button
     input
         outline: none
 
+.credlogin
+    display: block
+    text-align: center
+    justify-content: center
+    input
+        outline: none
 .close
     float: right
     margin: 5px
@@ -137,7 +174,13 @@ button
         &:hover
             transform: rotate(90deg)
             transition: transform 0.2s
-
+.cls-1
+    fill: #3b4551
+                
+.cls-2 
+    fill: #2b77c0
+#Call
+    fill:#00a824
 /* .input input   
  height: 0  
  width: 0  

@@ -4,7 +4,7 @@ import UploadForm from './UploadForm';
 export const FormButton = () => {
     const [viewmf, setViewmf] = useState(false);
     return (
-        <div style={{textAlign:'center'}} >
+        <div className="text-center" >
             <button className="input form" onClick={()=>{
                 setViewmf(prev =>!prev)
 
