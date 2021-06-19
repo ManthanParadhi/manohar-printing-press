@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import $ from 'jquery';
+import React from 'react';
+// import $ from 'jquery';
 import { Telephone } from '../Logos/Telephone';
 import { Call } from '../Logos/Call';
 const Navigation = () => {

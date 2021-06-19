@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Route path='/admin/admin' exact component={Admin}/>
       <Navigation/>
       
