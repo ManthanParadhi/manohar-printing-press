@@ -5,6 +5,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+  order-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 10px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
@@ -20,7 +34,7 @@ nav {
 .form {
   text-align: center;
   width: 80%;
-  margin: 5vh auto;
+  margin-top: 5vh;
 }
 
 .p-2 {
@@ -114,6 +128,12 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 90%;
+  cursor: pointer;
+}
+
+.img-wrap img:hover {
+  opacity: 100%;
 }
 
 .backdrop {
@@ -308,6 +328,20 @@ nav {
  margin: 10px 10px
  padding: 10px
  */
+@media (max-width: 1000px) {
+  .img-grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .img-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 1200px) {
   .specprice {
     display: block;

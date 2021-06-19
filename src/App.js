@@ -9,7 +9,7 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <Route path='/admin/admin' exact component={Admin}/>
       <Navigation/>
       
