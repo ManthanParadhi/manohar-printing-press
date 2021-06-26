@@ -3,7 +3,7 @@ import React from 'react'
 export const Call = () => {
 return (
 
-    <svg width="20px" id="Layer_1" data-name="Layer 1"
+    <svg stroke="#fff" strokeWidth="1.5px" strokeLinejoin= "round" width="20px" id="Layer_1" data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
         <title>Call</title>
         <path id="Call"

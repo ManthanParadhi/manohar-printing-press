@@ -3,7 +3,7 @@ import React from 'react'
 export const Telephone = () => {
 return (
 
-        <svg width="20px" id="Layer_1" data-name="Layer 1"
+        <svg stroke="#fff" strokeWidth="5px" strokeLinejoin= "round" width="20px" id="Layer_1" data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
 
             <title>a</title>

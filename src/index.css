@@ -3,20 +3,64 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./Logos/Background.svg);
+  -webkit-animation: 4s linear 0s infinite bp;
+          animation: 4s linear 0s infinite bp;
 }
 
 body::-webkit-scrollbar {
-  width: 10px;
-  order-radius: 10px;
+  width: 8px;
 }
 
 body::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0);
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   border-radius: 10px;
+}
+
+@-webkit-keyframes bp {
+  from {
+    background-position: 50px 0;
+  }
+  to {
+    background-position: 0 50px;
+  }
+}
+
+@keyframes bp {
+  from {
+    background-position: 50px 0;
+  }
+  to {
+    background-position: 0 50px;
+  }
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 code {
@@ -65,17 +109,14 @@ nav {
 }
 
 .dark {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(black), color-stop(black), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), black, black, rgba(0, 0, 0, 0));
-  color: white;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+  color: #010029;
   width: 100%;
-  margin-top: 1px;
   position: fixed;
   top: 0;
-}
-
-.dark:hover {
-  background-color: #0a0a0a;
 }
 
 .dark svg {
@@ -85,6 +126,7 @@ nav {
 
 .dark h3 {
   display: inline-block;
+  margin: 0;
   font-family: 'Courgette', cursive;
 }
 
@@ -92,10 +134,49 @@ nav {
   margin: 0;
   padding: 10px;
   font-family: 'Courgette', cursive;
+  color: rgba(0, 0, 0, 0);
+  -webkit-animation: colorchange 10s ease-in 1s infinite;
+          animation: colorchange 10s ease-in 1s infinite;
+  font-size: 2rem;
 }
 
 .dark .margin-right {
   margin-right: 20px;
+}
+
+.dark div {
+  display: inline-block;
+  margin: 10px;
+}
+
+.dark::before {
+  content: "";
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+@-webkit-keyframes colorchange {
+  0% {
+    color: white;
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes colorchange {
+  0% {
+    color: white;
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    color: white;
+  }
 }
 
 .justify-center {
@@ -111,6 +192,7 @@ nav {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3%;
+  padding: 10px;
 }
 
 .img-wrap {
@@ -339,6 +421,9 @@ nav {
   .img-grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .dark div {
+    display: block;
   }
 }
 

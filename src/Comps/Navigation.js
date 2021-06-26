@@ -111,10 +111,14 @@ const Navigation = () => {
                 </section> */}
 
 				<h1> Manohar Printing Press and Photo Studio</h1>
+				<div>
 				<Telephone/>
-				<h3 className="margin-right">(02363) 246548</h3>
+				<h3>(02363) 246548</h3>
+				</div>
+				<div>
 				<Call />
 				<h3>9421936685 / 9421983063</h3>
+				</div>
             </nav>
         </div>
     )
