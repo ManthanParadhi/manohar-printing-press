@@ -159,8 +159,20 @@ nav {
   0% {
     color: white;
   }
+  20% {
+    color: white;
+  }
+  30% {
+    color: black;
+  }
   50% {
     color: black;
+  }
+  70% {
+    color: black;
+  }
+  80% {
+    color: white;
   }
   100% {
     color: white;
@@ -171,8 +183,20 @@ nav {
   0% {
     color: white;
   }
+  20% {
+    color: white;
+  }
+  30% {
+    color: black;
+  }
   50% {
     color: black;
+  }
+  70% {
+    color: black;
+  }
+  80% {
+    color: white;
   }
   100% {
     color: white;
