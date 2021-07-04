@@ -234,12 +234,12 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 90%;
+  opacity: 0.9;
   cursor: pointer;
 }
 
 .img-wrap img:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .backdrop {
@@ -415,25 +415,6 @@ nav {
   fill: #00a824;
 }
 
-/* .input input
- height: 0
- width: 0
- opacity: 0
- */
-/* input[type="file"]::-webkit-file-upload-button
- border: none
- padding: 5px 12px
- background: #9e2baf
- color: #fff
- font-size: 1em
- transition: all 0.4s
- cursor: pointer
- border-radius: 20px
- */
-/* .input span
- margin: 10px 10px
- padding: 10px
- */
 @media (max-width: 1000px) {
   .img-grid {
     -ms-grid-columns: 1fr 1fr;
