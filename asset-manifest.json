@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/manohar-printing-press/static/css/main.b883817d.chunk.css",
+    "main.css": "/manohar-printing-press/static/css/main.0e91b210.chunk.css",
     "main.js": "/manohar-printing-press/static/js/main.4a58ef18.chunk.js",
     "main.js.map": "/manohar-printing-press/static/js/main.4a58ef18.chunk.js.map",
     "runtime-main.js": "/manohar-printing-press/static/js/runtime-main.f370fe15.js",
@@ -8,14 +8,14 @@
     "static/js/2.a88ef11c.chunk.js": "/manohar-printing-press/static/js/2.a88ef11c.chunk.js",
     "static/js/2.a88ef11c.chunk.js.map": "/manohar-printing-press/static/js/2.a88ef11c.chunk.js.map",
     "index.html": "/manohar-printing-press/index.html",
-    "static/css/main.b883817d.chunk.css.map": "/manohar-printing-press/static/css/main.b883817d.chunk.css.map",
+    "static/css/main.0e91b210.chunk.css.map": "/manohar-printing-press/static/css/main.0e91b210.chunk.css.map",
     "static/js/2.a88ef11c.chunk.js.LICENSE.txt": "/manohar-printing-press/static/js/2.a88ef11c.chunk.js.LICENSE.txt",
     "static/media/index.css": "/manohar-printing-press/static/media/Background.238dd71b.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f370fe15.js",
     "static/js/2.a88ef11c.chunk.js",
-    "static/css/main.b883817d.chunk.css",
+    "static/css/main.0e91b210.chunk.css",
     "static/js/main.4a58ef18.chunk.js"
   ]
 }
